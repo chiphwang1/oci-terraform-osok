@@ -86,7 +86,7 @@ The Complete Specification of the `AutonomousDatabase` Custom Resource (CR) is a
 | `private_key_path` | path to the private key file on your system | string | yes       |
 | `region` | region where your Kubernetes cluster reside | string | yes       |
 | `fingerprint` | finger print of your ocid user credentials | string    | yes       |
-| `passphrase`| passphrase for user credentials | int    | yes       |
+| `passphrase`| passphrase for user credentials | string   | yes       |
 | `node_compartment_ocid` | ocid of the compartmenet where the Kubernetes cluster reside | string | yes        |
 | `dynamic_group_name` | Name to assign to the dynamic group  | string | yes       |
 | `"dynamic_group_description`  | description for the dynamic group | string | yes       |
@@ -94,6 +94,7 @@ The Complete Specification of the `AutonomousDatabase` Custom Resource (CR) is a
 | `policy_name` | name that will be assigned to the policy | string | yes |
 | `kube_config_path` | path to config file to access your Kubernetes cluster| string | yes       |
 | `config_context` | context within the kube_config file to use | string | yes |
+
 
 
 
