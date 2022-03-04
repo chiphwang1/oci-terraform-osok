@@ -48,12 +48,8 @@ As part of the installation,this Terraform palybook will install the pre-requisi
 
       cd ./oci-terraform-osok
 
-**3. Populate the values.yaml file with information to deploy the Autonomous Database resource**
+**3. Populate the variables.tf file with the required information to deploy OSOK**
 
-
-**4. Create the namespace where the ATP resource will be deployed**
-
-     kubectl create ns <namespace name>
 
 **5. Install the Helm chart. Best practice is to assign the databse password and wallet password during the installation of the Helm chart instead of adding it to the values.yam file.**
 
