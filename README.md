@@ -88,7 +88,7 @@ As part of the installation, this Terraform playbook will install the pre-requis
 | `dynamic_group_description`  | Description for the dynamic group in OCI | string | yes       |
 | `policy_description`| Description for the policy in OCI | string | yes        |
 | `policy_name` | Name that will be assigned to the policy in OCI | string | yes |
-| `kube_config_path` | Path to config file to access your Kubernetes cluster| string | yes       |
+| `kube_config_path` | Path to config file to access the Kubernetes cluster| string | yes       |
 | `config_context` | Context within the kube_config file to use | string | yes |
 
 
