@@ -33,10 +33,9 @@ As part of the installation,this Terraform palybook will install the pre-requisi
 ## Pre-requisites
 
 - A Kuberntes cluster deployed in OCI 
-- [OCI Service Operator for Kuberntes (OSOK) deployed in the cluster](https://github.com/oracle/oci-service-operator/blob/main/docs/installation.md)
 - [kubectl installed and using the context for the Kubernetes cluster where the ATP resource will be deployed](https://kubernetes.io/docs/tasks/tools/)
-- [Helm installed](https://helm.sh/docs/intro/install/)
 - [Docker installed](https://docs.docker.com/engine/install/)
+- OCI credentials with the required permissions to create Dynamic groups and policies on OCI
 
 
 ##  Getting Started
