@@ -6,11 +6,11 @@
 
 ## Introduction
 
-This Terraform playbook will automate the installion of the OCI Service Operator for Kubernetes (OSOK) in a Kubernetes cluster deployed on Oracle Cloud Infrastructure (OCI). The Kubernetes cluster can be a customer managed cluster deployed on virtual machines (VM) or a cluster that is managed with the Oracle Container Engine for kubernetes (OKE) service.
+This Terraform playbook will automate the installation of the OCI Service Operator for Kubernetes (OSOK) in a Kubernetes cluster deployed on Oracle Cloud Infrastructure (OCI). The Kubernetes cluster can be a customer-managed cluster deployed on virtual machines (VM) or a cluster managed with the Oracle Container Engine for Kubernetes (OKE) service.
 
 ### OSOK Supported Services
 
-As part of the installation,this Terraform playbook will install the pre-requisites and the requirements for OSOK to manage the following OCI services.
+As part of the installation, this Terraform playbook will install the pre-requisites and the requirements for OSOK to manage the following OCI services.
 
 - MySQL Databse System (MDS)
 - Autonomous Database (ATP)
@@ -44,14 +44,14 @@ As part of the installation,this Terraform playbook will install the pre-requisi
      
      git clone https://github.com/chiphwang1/oci-terraform-osok.git
 
-**2. Change to the directory that holds the Helm Chart** 
+**2. Change to the directory that holds the Terraform code** 
 
       cd ./oci-terraform-osok
 
 **3. Populate the variables.tf file with the required information to deploy OSOK**
 
 
-**4. To Initialize,plan,and apply the Terraform playbook run the following commands**
+**4. To Initialize, plan, and apply the Terraform playbook, run the following commands**
 
 ``` 
 # terraform initialize
@@ -60,7 +60,7 @@ As part of the installation,this Terraform playbook will install the pre-requisi
     
 ```   
 
-**5. To uninstall OSOK and associated components**
+**5. To uninstall OSOK and associated components.**
 
 ```
 # terraform destroy
