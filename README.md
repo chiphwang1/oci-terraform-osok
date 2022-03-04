@@ -10,6 +10,13 @@ This Terraform playbook will automate the installion of the OCI Service Operator
 
 In addition,the Terraform palybook will install the pre-requisites and the requirements for the OSOK to manage following OCI services.
 
+- MySQL Databse System (MDS)
+- Autonomous Database (ATP)
+- Streaming Service
+- Service Mesh
+
+
+
 
 
 
