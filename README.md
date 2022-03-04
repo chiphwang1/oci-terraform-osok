@@ -77,19 +77,19 @@ As part of the installation, this Terraform playbook will install the pre-requis
 
 | Parameter                          | Description                                                         | Type   | Mandatory |
 | ---------------------------------- | ------------------------------------------------------------------- | ------ | --------- |
-| `tenancy_ocid` | ocid of your tenenacy | string | yes  |
-| `user_ocid` | ocid of your user | string | yes       |
-| `private_key_path` | path to the private key file for your ocid credentials on your system | string | yes       |
-| `region` | region where your Kubernetes cluster reside | string | yes       |
-| `fingerprint` | finger print of your ocid user credentials | string    | yes       |
-| `passphrase`| passphrase for user credentials | string   | yes       |
-| `node_compartment_ocid` | ocid of the compartment where the Kubernetes cluster reside | string | yes        |
+| `tenancy_ocid` | OCID of your tenenacy | string | yes  |
+| `user_ocid` | OCID of your user | string | yes       |
+| `private_key_path` | Path to the private key file for the user ocid credentials on your system | string | yes       |
+| `region` | Region where the Kubernetes cluster resides | string | yes       |
+| `fingerprint` | Fingerprint of the user credentials | string    | yes       |
+| `passphrase`| Passphrase for user credentials | string   | yes       |
+| `node_compartment_ocid` | OCID of the compartment where the Kubernetes cluster resides | string | yes        |
 | `dynamic_group_name` | Name to assign to the dynamic group in OCI | string | yes       |
-| `dynamic_group_description`  | description for the dynamic group in OCI | string | yes       |
+| `dynamic_group_description`  | Description for the dynamic group in OCI | string | yes       |
 | `policy_description`| Description for the policy in OCI | string | yes        |
-| `policy_name` | name that will be assigned to the policy in OCI | string | yes |
-| `kube_config_path` | path to config file to access your Kubernetes cluster| string | yes       |
-| `config_context` | context within the kube_config file to use | string | yes |
+| `policy_name` | Name that will be assigned to the policy in OCI | string | yes |
+| `kube_config_path` | Path to config file to access your Kubernetes cluster| string | yes       |
+| `config_context` | Context within the kube_config file to use | string | yes |
 
 
 
