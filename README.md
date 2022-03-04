@@ -85,7 +85,7 @@ As part of the installation, this Terraform playbook will install the pre-requis
 | `passphrase`| passphrase for user credentials | string   | yes       |
 | `node_compartment_ocid` | ocid of the compartment where the Kubernetes cluster reside | string | yes        |
 | `dynamic_group_name` | Name to assign to the dynamic group  | string | yes       |
-| `"dynamic_group_description`  | description for the dynamic group | string | yes       |
+| `dynamic_group_description`  | description for the dynamic group | string | yes       |
 | `policy_description`| Description for the policy | string | yes        |
 | `policy_name` | name that will be assigned to the policy | string | yes |
 | `kube_config_path` | path to config file to access your Kubernetes cluster| string | yes       |
