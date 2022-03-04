@@ -79,7 +79,7 @@ As part of the installation, this Terraform playbook will install the pre-requis
 | ---------------------------------- | ------------------------------------------------------------------- | ------ | --------- |
 | `tenancy_ocid` | ocid of your tenenacy | string | yes  |
 | `user_ocid` | ocid of your user | string | yes       |
-| `private_key_path` | path to the private key file on your system | string | yes       |
+| `private_key_path` | path to the private key file for your ocid credentials on your system | string | yes       |
 | `region` | region where your Kubernetes cluster reside | string | yes       |
 | `fingerprint` | finger print of your ocid user credentials | string    | yes       |
 | `passphrase`| passphrase for user credentials | string   | yes       |
