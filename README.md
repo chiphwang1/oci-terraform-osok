@@ -51,7 +51,7 @@ As part of the installation,this Terraform playbook will install the pre-requisi
 **3. Populate the variables.tf file with the required information to deploy OSOK**
 
 
-**5. Initialize, plan and apply the Terraform playbook
+**4. Initialize, plan and apply the Terraform playbook**
 
 ``` 
 # terraform initialize
@@ -60,14 +60,15 @@ As part of the installation,this Terraform playbook will install the pre-requisi
     
 ```   
 
-**7. To uninstall the Helm chart**
+**5. To uninstall OSOK and associated components**
 
-     helm uninstall -n <namespace name> <name of the install> .
+```
+# terraform destroy
+```
+
      
      
-   **Important Note**
- 
-Uninstalling the helm chart will only remove the ATP resource from the cluster and not OCI. You will need to use the console or the OCI CLI to remove the ATP from OCI. This function is to prevent accidental deletion of the database.
+     
 
      
   **Notes/Issues:**
