@@ -51,23 +51,14 @@ As part of the installation,this Terraform playbook will install the pre-requisi
 **3. Populate the variables.tf file with the required information to deploy OSOK**
 
 
-**5. Install the Helm chart. Best practice is to assign the databse password and wallet password during the installation of the Helm chart instead of adding it to the values.yam file.**
+**5. Initialize, plan and apply the Terraform playbook
 
-     helm -n <namespace name> install \
-     --set dbPassword=<database password> \  
-     --set walletPassword=<wallet password> \
-       <name for this install> .
-  
-  ***Example:***
-     helm -n autodb  --set dbPassword=Admin!2345  --set walletPassword=Admin!2345 autodb .   
-     
-The password must be between 8 and 32 characters long, and must contain at least 1 numeric character, 1 lowercase character, 1 uppercase character, and 1        special (nonalphanumeric) character.
-
-
-**6. List the Helm installation**
-
-     helm  -n <namespace name> ls
-
+``` 
+# terraform initialize
+# terraform plan
+# terraform apply
+    
+```   
 
 **7. To uninstall the Helm chart**
 
