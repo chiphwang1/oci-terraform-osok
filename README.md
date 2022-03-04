@@ -72,10 +72,8 @@ As part of the installation,this Terraform playbook will install the pre-requisi
  
 
 
- ## Variables Definition
+ ## Variables Definitions
 
-
- Specification of the variables.tf file:
 
 | Parameter                          | Description                                                         | Type   | Mandatory |
 | ---------------------------------- | ------------------------------------------------------------------- | ------ | --------- |
