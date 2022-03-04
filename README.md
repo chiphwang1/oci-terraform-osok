@@ -84,11 +84,11 @@ The Complete Specification of the `AutonomousDatabase` Custom Resource (CR) is a
 | `tenancy_ocid` | ocid of your tenenacy | string | yes  |
 | `user_ocid` | ocid of your user | string | yes       |
 | `private_key_path` | path to the private key file on your system | string | yes       |
-| `spec.compartmentId` | The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment of the Autonomous Database. | string | yes       |
-| `spec.cpuCoreCount` | The number of OCPU cores to be made available to the database. | int    | yes       |
-| `spec.dataStorageSizeInTBs`| The size, in terabytes, of the data volume that will be created and attached to the database. This storage can later be scaled up if needed. | int    | yes       |
-| `spec.dbVersion` | A valid Oracle Database version for Autonomous Database. | string | no        |
-| `spec.isDedicated` | True if the database is on dedicated [Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adbddoverview.htm).  | boolean | no       |
+| `region` | region where your Kubernetes cluster reside | string | yes       |
+| `fingerprint` | finger print of your ocid user credentials | string    | yes       |
+| `passphrase`| passphrase for user credentials | int    | yes       |
+| `node_compartment_ocid` | ocid of the compartmenet where the Kubernetes cluster reside | string | yes        |
+| `dynamic_group_name` | Name to assign to the dynamic group  | string | yes       |
 | `spec.dbWorkload`  | The Autonomous Database workload type. The following values are valid:  <ul><li>**OLTP** - indicates an Autonomous Transaction Processing database</li><li>**DW** - indicates an Autonomous Data Warehouse database</li></ul>  | string | yes       |
 | `spec.isAutoScalingEnabled`| Indicates if auto scaling is enabled for the Autonomous Database OCPU core count. The default value is `FALSE`. | boolean| no        |
 | `spec.isFreeTier` | Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled. | boolean | no |
