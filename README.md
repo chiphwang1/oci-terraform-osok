@@ -14,8 +14,8 @@ As part of the installation,this Terraform playbook will install the pre-requisi
 
 - MySQL Databse System (MDS)
 - Autonomous Database (ATP)
-- Streaming Service
-- Service Mesh
+- Oracle Streaming Service
+- Oracle Service Mesh
 
 ### Installed Components
 
