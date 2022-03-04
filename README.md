@@ -77,17 +77,28 @@ As part of the installation,this Terraform playbook will install the pre-requisi
 Once the  ATP is ready, a secret with the name defined in values.yaml file under wallet.walletName will be created to expose the wallet files required to connect to the ATP.
 
 
-| Parameter          | Description                                                              | Type   | Mandatory |  
-| ------------------ | ------------------------------------------------------------------------ | ------ |
-| `tenancy_ocid`      | OCID of your tenancy.                                                   | string | Yes     |
-| `user_ocid`         | OCID of your user.                                                      | string | Yes     |
-| `private_key_path`  | Location of your private key for OCI on your system               .     | string | Yes     |
-| `region`            | region to where you Kubernetes cluster reside                           | string | Yes     |
-| `fingerprint      ` | fingerprint of you OCI credentials                                      | string | Yes     |
-| `passphrase`        | Passphrase of your OCI credentials                                      | string | Yes     |
-| `node_compartment_ocid` | OCID of the compartment where yor Kubernetes cLuster reside         | string | Yes     |
-| `dynamic_group_name`| Name to assign to Dynamic Group.                                       | string |  Yes     |
-| `dynamic_group_name`| Name to assign to Dynamic Group.                                       | string |  Yes     |
+The Complete Specification of the `AutonomousDatabase` Custom Resource (CR) is as detailed below:
+
+| Parameter                          | Description                                                         | Type   | Mandatory |
+| ---------------------------------- | ------------------------------------------------------------------- | ------ | --------- |
+| `tenancy_ocid` | ocid of your tenenacy | string | yes  |
+| `spec.displayName` | The user-friendly name for the Autonomous Database. The name does not have to be unique. | string | yes       |
+| `spec.dbName` | The database name. The name must begin with an alphabetic character and can contain a maximum of 14 alphanumeric characters. Special characters are not permitted. The database name must be unique in the tenancy. | string | yes       |
+| `spec.compartmentId` | The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment of the Autonomous Database. | string | yes       |
+| `spec.cpuCoreCount` | The number of OCPU cores to be made available to the database. | int    | yes       |
+| `spec.dataStorageSizeInTBs`| The size, in terabytes, of the data volume that will be created and attached to the database. This storage can later be scaled up if needed. | int    | yes       |
+| `spec.dbVersion` | A valid Oracle Database version for Autonomous Database. | string | no        |
+| `spec.isDedicated` | True if the database is on dedicated [Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adbddoverview.htm).  | boolean | no       |
+| `spec.dbWorkload`  | The Autonomous Database workload type. The following values are valid:  <ul><li>**OLTP** - indicates an Autonomous Transaction Processing database</li><li>**DW** - indicates an Autonomous Data Warehouse database</li></ul>  | string | yes       |
+| `spec.isAutoScalingEnabled`| Indicates if auto scaling is enabled for the Autonomous Database OCPU core count. The default value is `FALSE`. | boolean| no        |
+| `spec.isFreeTier` | Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled. | boolean | no |
+| `spec.licenseModel` | The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle PaaS and IaaS services in the cloud. License Included allows you to subscribe to new Oracle Database software licenses and the Database service. Note that when provisioning an Autonomous Database on [dedicated Exadata infrastructure](https://docs.oracle.com/iaas/Content/Database/Concepts/adbddoverview.htm), this attribute must be null because the attribute is already set at the Autonomous Exadata Infrastructure level. When using [shared Exadata infrastructure](https://docs.oracle.com/iaas/Content/Database/Concepts/adboverview.htm#AEI), if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`. <br>Allowed values are:<ul><li>LICENSE_INCLUDED</li><li>BRING_YOUR_OWN_LICENSE</li></ul>. | string | no       |
+| `spec.freeformTags` | Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm). `Example: {"Department": "Finance"}` | string | no |
+| `spec.definedTags` | Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm). | string | no |
+| `spec.adminPassword.secret.secretName` | The Kubernetes Secret Name that contains admin password for Autonomous Database. The password must be between 12 and 30 characters long, and must contain at least 1 uppercase, 1 lowercase, and 1 numeric character. It cannot contain the double quote symbol (") or the username "admin", regardless of casing. | string | yes       |
+| `spec.wallet.walletName` | The Kubernetes Secret Name of the wallet which contains the downloaded wallet information. | string | yes       |
+| `spec.walletPassword.secret.secretName`| The Kubernetes Secret Name that contains the password to be used for downloading the Wallet. | string |  no  |
+
 
 
 
