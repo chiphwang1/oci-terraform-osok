@@ -51,7 +51,7 @@ As part of the installation,this Terraform playbook will install the pre-requisi
 **3. Populate the variables.tf file with the required information to deploy OSOK**
 
 
-**4. Initialize, plan and apply the Terraform playbook**
+**4. To Initialize,plan and apply the Terraform playbook run the following commands**
 
 ``` 
 # terraform initialize
@@ -66,9 +66,6 @@ As part of the installation,this Terraform playbook will install the pre-requisi
 # terraform destroy
 ```
 
-     
-     
-     
 
      
   **Notes/Issues:**
