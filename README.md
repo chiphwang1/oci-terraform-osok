@@ -42,11 +42,11 @@ As part of the installation,this Terraform palybook will install the pre-requisi
 
 **1. Clone or download the contents of this repo** 
      
-     git clone https://github.com/oracle-devrel/helm-oci-autonomous-db.git
+     git clone https://github.com/chiphwang1/oci-terraform-osok.git
 
 **2. Change to the directory that holds the Helm Chart** 
 
-      cd ./helm-oci-autonomous-db
+      cd ./oci-terraform-osok
 
 **3. Populate the values.yaml file with information to deploy the Autonomous Database resource**
 
