@@ -83,7 +83,7 @@ As part of the installation,this Terraform playbook will install the pre-requisi
 | `region` | region where your Kubernetes cluster reside | string | yes       |
 | `fingerprint` | finger print of your ocid user credentials | string    | yes       |
 | `passphrase`| passphrase for user credentials | string   | yes       |
-| `node_compartment_ocid` | ocid of the compartmenet where the Kubernetes cluster reside | string | yes        |
+| `node_compartment_ocid` | ocid of the compartment where the Kubernetes cluster reside | string | yes        |
 | `dynamic_group_name` | Name to assign to the dynamic group  | string | yes       |
 | `"dynamic_group_description`  | description for the dynamic group | string | yes       |
 | `policy_description`| Description for the policy | string | yes        |
