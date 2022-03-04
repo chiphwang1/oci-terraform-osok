@@ -82,8 +82,8 @@ The Complete Specification of the `AutonomousDatabase` Custom Resource (CR) is a
 | Parameter                          | Description                                                         | Type   | Mandatory |
 | ---------------------------------- | ------------------------------------------------------------------- | ------ | --------- |
 | `tenancy_ocid` | ocid of your tenenacy | string | yes  |
-| `spec.displayName` | The user-friendly name for the Autonomous Database. The name does not have to be unique. | string | yes       |
-| `spec.dbName` | The database name. The name must begin with an alphabetic character and can contain a maximum of 14 alphanumeric characters. Special characters are not permitted. The database name must be unique in the tenancy. | string | yes       |
+| `user_ocid` | ocid of your user | string | yes       |
+| `private_key_path` | path to the private key file on your system | string | yes       |
 | `spec.compartmentId` | The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment of the Autonomous Database. | string | yes       |
 | `spec.cpuCoreCount` | The number of OCPU cores to be made available to the database. | int    | yes       |
 | `spec.dataStorageSizeInTBs`| The size, in terabytes, of the data volume that will be created and attached to the database. This storage can later be scaled up if needed. | int    | yes       |
