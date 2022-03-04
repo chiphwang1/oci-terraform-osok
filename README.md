@@ -8,14 +8,21 @@
 
 This Terraform playbook will automate the installion of the OCI Service Operator for Kubernetes (OSOK) in a Kubernetes cluster deployed on Oracle Cloud Infrastructure (OCI). The Kubernetes cluster can be a customer managed cluster deployed on virtual machines (VM) or a cluster that is managed with the Oracle Container Engine for kubernetes (OKE) service.
 
-In addition,the Terraform palybook will install the pre-requisites and the requirements for the OSOK to manage following OCI services.
+### OSOK Supported Services
+
+As part of the installation,this Terraform palybook will install the pre-requisites and the requirements for the OSOK to manage following OCI services.
 
 - MySQL Databse System (MDS)
 - Autonomous Database (ATP)
 - Streaming Service
 - Service Mesh
 
+### Installed Components
 
+- MySQL Databse System (MDS)
+- Autonomous Database (ATP)
+- Streaming Service
+- Service Mesh
 
 
 
