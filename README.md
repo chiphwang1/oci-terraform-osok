@@ -74,10 +74,8 @@ As part of the installation,this Terraform playbook will install the pre-requisi
 
  ## Variables Definition
 
-Once the  ATP is ready, a secret with the name defined in values.yaml file under wallet.walletName will be created to expose the wallet files required to connect to the ATP.
 
-
-The Complete Specification of the `AutonomousDatabase` Custom Resource (CR) is as detailed below:
+ Specification of the variables.tf file:
 
 | Parameter                          | Description                                                         | Type   | Mandatory |
 | ---------------------------------- | ------------------------------------------------------------------- | ------ | --------- |
