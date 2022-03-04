@@ -70,31 +70,24 @@ As part of the installation,this Terraform playbook will install the pre-requisi
      
   **Notes/Issues:**
  
- Provisioning the Autonomous Database (ATP) can take up to 5 minutes. 
- 
- To confirm that the ATP is active, run the following command and check the status of the ATP system.
 
-```sh
-$ kubectl -n <name of namespace> get autonomousdatabases -o wide
-NAME            DISPLAYNAME     DBWORKLOAD   STATUS   OCID                                                                                            AGE
-autodbtest301   autodbtest301   OLTP         Active   ocid1.autonomousdatabase.oc1.iad.anuwcljsnlc5nbyazyyzlqxytdmghb5eyafntqnxq6cupu3zmxf6jihz6vna   28m
-```
 
  ## Variables Definition
 
 Once the  ATP is ready, a secret with the name defined in values.yaml file under wallet.walletName will be created to expose the wallet files required to connect to the ATP.
 
 
-| Parameter          | Description                                                              | Type   |
+| Parameter          | Description                                                              | Type   | Mandatory |  
 | ------------------ | ------------------------------------------------------------------------ | ------ |
-| `ewallet.p12`      | Oracle Wallet.                                                           | string |
-| `cwallet.sso`      | Oracle wallet with autologin.                                            | string |
-| `tnsnames.ora`     | Configuration file containing service name and other connection details. | string |
-| `sqlnet.ora`       |                                                                          | string |
-| `ojdbc.properties` |                                                                          | string |
-| `keystore.jks`     | Java Keystore.                                                           | string |
-| `truststore.jks`   | Java trustore.                                                           | string |
-| `user_name`        | Pre-provisioned DB ADMIN Username.                                       | string |
+| `tenancy_ocid`      | OCID of your tenancy.                                                   | string | Yes     |
+| `user_ocid`         | OCID of your user.                                                      | string | Yes     |
+| `private_key_path`  | Location of your private key for OCI on your system               .     | string | Yes     |
+| `region`            | region to where you Kubernetes cluster reside                           | string | Yes     |
+| `fingerprint      ` | fingerprint of you OCI credentials                                      | string | Yes     |
+| `passphrase`        | Passphrase of your OCI credentials                                      | string | Yes     |
+| `node_compartment_ocid` | OCID of the compartment where yor Kubernetes cLuster reside         | string | Yes     |
+| `dynamic_group_name`| Name to assign to Dynamic Group.                                       | string |  Yes     |
+| `dynamic_group_name`| Name to assign to Dynamic Group.                                       | string |  Yes     |
 
 
 
