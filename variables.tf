@@ -70,6 +70,7 @@ variable "kube_config_path" {
     default = "~/.kube/config"
 }
 
+# context within .kubeconfig to use
 variable "config_context" {
     type = string
     default = ""
