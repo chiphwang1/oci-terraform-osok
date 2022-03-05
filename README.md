@@ -72,7 +72,7 @@ As part of the installation, this Terraform playbook will install the pre-requis
  
 
 
- ## Variables Definitions
+ ## Variable Definitions
 
 
 | Parameter                          | Description                                                         | Type   | Mandatory |
