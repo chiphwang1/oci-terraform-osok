@@ -22,7 +22,7 @@ output "osok_policy_ocid" {
 
 }
 
-output "osok_policy_mame" {
+output "osok_policy_name" {
 
     value = oci_identity_policy.osok_policy.name
     description = "name  of OSOK policy"
