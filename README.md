@@ -23,7 +23,8 @@ As part of the installation, this Terraform playbook will install the pre-requis
 - Operator Lifecycle Manager [OLM](https://olm.operatorframework.io/docs/getting-started/) in the Kubernetes Cluster  
 - OCI Dynamic Group that contain all Kubernetes worker nodes in the compartment
 - OCI Policy to grant the Kuberntes worker nodes permission to manage OSOK supported services
-- Kubernetes namespaces for OSOK and OLM
+- Kubernetes namespace for OSOK 
+- Kubernetes namespace for PLM
 - Kubernetes secret with credentials required by OSOK
 
 
