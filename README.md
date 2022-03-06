@@ -33,7 +33,7 @@ As part of the installation, this Terraform playbook will install the pre-requis
 ## Pre-requisites
 
 - A Kuberntes cluster deployed in OCI 
-- [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and using the context for the Kubernetes cluster where OSOK will be deployed]
+- [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and using the context for the Kubernetes cluster where OSOK will be deployed
 - [Docker](https://docs.docker.com/engine/install/) installed
 - OCI credentials with the required permissions to create Dynamic groups and policies on OCI
 
