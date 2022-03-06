@@ -24,7 +24,7 @@ As part of the installation, this Terraform playbook will install the pre-requis
 - OCI Dynamic Group that contain all Kubernetes worker nodes in the compartment
 - OCI Policy to grant the Kuberntes worker nodes permission to manage OSOK supported services
 - Kubernetes namespace for OSOK 
-- Kubernetes namespace for PLM
+- Kubernetes namespace for OLM
 - Kubernetes secret with credentials required by OSOK
 
 
