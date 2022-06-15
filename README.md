@@ -55,7 +55,7 @@ As part of the installation, this Terraform playbook will install the pre-requis
 **4. To Initialize, plan, and apply the Terraform playbook, run the following commands**
 
 ``` 
-# terraform initialize
+# terraform init
 # terraform plan
 # terraform apply
     
